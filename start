@@ -1,0 +1,7 @@
+#!/usr/bin/env escript
+
+main([]) ->
+  io:format("Usage: start <port>~n");
+main([Port]) ->
+  P = list_to_integer(Port),
+  chat_dispatcher:main(P).
